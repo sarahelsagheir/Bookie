@@ -4,14 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Book;
-use Illuminate\Foundation\Auth\User;
 use App\Notifications\BorrowRequest;
-
 use App\Borrower;
 use App\Notifications\ApproveNotification;
 use App\Notifications\DisapprovedNotification;
-
-
 use App\User as AppUser;
 
 class NotificationController extends Controller

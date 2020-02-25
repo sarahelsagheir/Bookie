@@ -231,7 +231,7 @@
             </div>
         </nav>
     </header>
-    <form action="{{route('rateShow',$user->id)}}" method="POST">
+    <form action="{{route('user.rate.store',$user->id)}}" method="POST">
         @csrf
         <div class="card">
             <img src="{{asset($user->cover)}}" alt="John" style="width:100%">

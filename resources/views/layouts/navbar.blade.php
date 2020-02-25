@@ -35,7 +35,7 @@
         @endif
         @else
         <li class="navbar-item">
-            <a href="{{route('chat')}}" class="nav-link cart  my-2 my-lg-0" role="button">
+            <a href="{{route('chat.index')}}" class="nav-link cart  my-2 my-lg-0" role="button">
                 <span><i class="fa fa-envelope" style=" font-size:17px;" aria-hidden="true"></i></span>
                 <span class="quntity">
                     {{DB::table('messages')

@@ -29,7 +29,7 @@
                     this.handleIncoming(e.message);
                 });
 
-            axios.get('/contacts')
+        axios.get(route('chat.create'))
                 .then((response) => {
                     this.contacts = response.data;
                 });
@@ -37,7 +37,7 @@
         methods: {
             startConversationWith(contact) {
                this.updateUnreadCount(contact, true);
-                axios.get(`/conversation/${contact.id}`)
+                axios.get(`/chat/${contact.id}`)
                     .then((response) => {
                         this.messages = response.data;
                         this.selectedContact = contact;
@@ -73,7 +73,7 @@
 
 
 <style lang="scss" scoped>
- 
+
 .chat-app {
     display: flex;
      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);

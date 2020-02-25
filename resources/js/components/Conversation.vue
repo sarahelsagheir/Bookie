@@ -30,7 +30,7 @@ export default {
         return;
       }
       axios
-        .post("/conversation/send", {
+        .post(route('chat.store'), {
           contact_id: this.contact.id,
           text: text
         })

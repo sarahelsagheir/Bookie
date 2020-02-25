@@ -59,21 +59,12 @@ Route::get('invoice/{amount}', 'CartController@generatePDF')->name('invoice');
 Route::resource('/wishlist', 'WishlistController', ['except' => ['create', 'edit', 'show', 'update']]);
 
 // chat
-Route::get('/chat', 'HomeController@index')->name('chat');
-Route::get('/contacts', 'ContactsController@normalget');
-Route::get('/contact', 'ContactsController@get');
-
-// Route::get('/contacts', 'ContactsController@normalget');
-Route::get('/conversation/{id}', 'ContactsController@getMessagesFor');
-Route::post('/conversation/send', 'ContactsController@send');
 Route::post('/conversation/send/{id}', 'ContactsController@sendMessage')->name('send.message');
+
+route::resource('chat','ContactsController');
 
 
 // rate
-Route::get('/showRate/{user}', 'RateController@rateNotification')->name('rateNotification')->middleware('auth');
-Route::get('/rateUser/{user}', 'RateController@rateUser')->name('rateUser')->middleware('auth');
-Route::post('/rateUser/{user}', 'RateController@rateShow')->name('rateShow')->middleware('auth');
-Route::get('/rateBorrower/{user}', 'RateController@rateBorrower')->name('rateBorrower');
 Route::resource('user.rate', 'RateController')->shallow();
 
 //------------------------------------------------------------------------------------------------------------
