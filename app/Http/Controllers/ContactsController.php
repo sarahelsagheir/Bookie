@@ -17,6 +17,7 @@ class ContactsController extends Controller
     {
        return view('chat.index');
     }
+<<<<<<< HEAD
     //all user for admin chat
     public function getAllUser()
     {
@@ -39,6 +40,8 @@ class ContactsController extends Controller
         return response()->json($contacts);
     }
 
+=======
+>>>>>>> 382d3327ad305d1a6da17b37cd4956a2677db6ab
 //user contact
     public function create()
     {

@@ -25,7 +25,10 @@ import 'vuetify/dist/vuetify.min.css'
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 Vue.component('chat-app', require('./components/ChatApp.vue').default);
+<<<<<<< HEAD
 Vue.component('admin-chat-app', require('./components/AdminChatApp.vue'));
+=======
+>>>>>>> 382d3327ad305d1a6da17b37cd4956a2677db6ab
 
 
 

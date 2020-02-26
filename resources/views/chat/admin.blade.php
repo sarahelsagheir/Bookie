@@ -160,7 +160,11 @@
 
     <div class="row justify-content-center">
         <div class="col-sm-12">
+<<<<<<< HEAD
             <admin-chat-app :user="{{ auth()->user() }}"></admin-chat-app>
+=======
+            <chat-app-admin :user="{{ auth()->user() }}"></chat-app-admin>
+>>>>>>> 382d3327ad305d1a6da17b37cd4956a2677db6ab
         </div>
     </div>
 </div>

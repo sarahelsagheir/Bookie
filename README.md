@@ -82,5 +82,8 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 # Bookie
 # Bookie
 >>>>>>> 433540172d403228673737b7f560b5a7779e9063
+<<<<<<< HEAD
 # Bookie_final
 # Bookie_final
+=======
+>>>>>>> 382d3327ad305d1a6da17b37cd4956a2677db6ab
