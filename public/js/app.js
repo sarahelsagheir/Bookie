@@ -1940,7 +1940,7 @@ __webpack_require__.r(__webpack_exports__);
     Echo["private"]("messages.".concat(this.user.id)).listen('NewMessage', function (e) {
       _this.handleIncoming(e.message);
     });
-    axios.get(route('chat.create')).then(function (response) {
+    axios.get("/chat/create").then(function (response)  {
       _this.contacts = response.data;
     });
   },
@@ -2104,7 +2104,7 @@ __webpack_require__.r(__webpack_exports__);
         return;
       }
 
-      axios.post(route('chat.store'), {
+      axios.post(route("/chat"), {
         contact_id: this.contact.id,
         text: text
       }).then(function (response) {
