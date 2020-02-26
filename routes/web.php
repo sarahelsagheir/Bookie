@@ -60,7 +60,6 @@ Route::resource('/wishlist', 'WishlistController', ['except' => ['create', 'edit
 
 // chat
 Route::post('/conversation/send/{id}', 'ContactsController@sendMessage')->name('send.message');
-
 route::resource('chat','ContactsController');
 
 
