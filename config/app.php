@@ -172,6 +172,7 @@ return [
         Cog\Laravel\Ban\Providers\BanServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
         Nexmo\Laravel\NexmoServiceProvider::class,
+    
         /*
          * Application Service Providers...
          */
