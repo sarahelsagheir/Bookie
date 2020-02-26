@@ -7,7 +7,6 @@
 
 
     <section>
-                   @include('searchForm')
 
              <div class="row">
             @foreach($products as $product)

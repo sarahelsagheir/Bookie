@@ -21,10 +21,6 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
-    {
-        return view('chat.index');
-    }
 
     public function search(Request $request)
     {
