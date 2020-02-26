@@ -93,7 +93,7 @@
                                                 @else Unavaliable
                                             @endif</td>
                                             
-                                            <td>-</td>
+                                            <td>{{$book->category->title}}</td>
                                             <td>{{ $book->user->name }}</td>
                                             <td>{{ $book->created_at->diffForHumans() }}</td>
                                             <td>{{ $book->updated_at->diffForHumans() }}</td>

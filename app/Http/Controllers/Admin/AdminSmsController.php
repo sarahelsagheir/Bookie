@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Nexmo\Laravel\Facade\Nexmo;
+use Illuminate\Support\Facades\Session;
+
 
 class AdminSmsController extends Controller
 {
@@ -15,6 +17,8 @@ class AdminSmsController extends Controller
         'from' => 'esraa',
         'text' => 'hey, the borrow time will end soon'
     ]);
+    Session::flash('SMS_sent', 'SMS sent Successfully.');
+
     return redirect()->back();
    }
 }
