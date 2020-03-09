@@ -128,9 +128,10 @@ class AdminBooksController extends Controller
     }
 
 
-    public function delete(Request $request)
+    public function deleteBook(Request $request)
     {
         $books = Book::findOrFail($request->checkBoxArray);
+        // dd($books);
         foreach ($books as $book) {
             if (is_file(public_path() . $book->cover)) {
                 unlink(public_path() . $book->cover);

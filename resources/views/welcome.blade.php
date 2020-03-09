@@ -7,9 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#03a6f3">
     <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
-    
-   
-    <link rel="shortcut icon" type="image/icon" href="kindle-master/assets/images/favicon.ico"/>
+
+
+    <link rel="shortcut icon" type="image/icon" href="kindle-master/assets/images/favicon.ico" />
     <!-- Font Awesome -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
     <!-- Bootstrap -->
@@ -25,11 +25,11 @@
     <!-- Fonts -->
 
     <!-- Open Sans for body font -->
-	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,800" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,800" rel="stylesheet">
     <!-- Lato for Title -->
-  	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
 
-   
+
     <link rel="stylesheet" href="book-store/css/styles.css">
     <link rel="stylesheet" type="text/css" href="fash/vendor/bootstrap/css/bootstrap.min.css">
     <!--===============================================================================================-->
@@ -59,93 +59,102 @@
     <link rel="stylesheet" type="text/css" href="fash/css/main.css">
     <link rel="stylesheet" type="text/css" href="book-store/css/owl.carousel.min.css">
 
-<style>
-html{scroll-behavior: smooth;}
-footer{
-    position: relative
-}
-#scroll {
-    position:absolute;
-    right:10px;
-    bottom:50px;
-    cursor:pointer;
-    width:50px;
-    height:50px;
-    background-color:#3498db;
-    text-indent:-9999px;
-    /* display:none; */
-    -webkit-border-radius:60px;
-    -moz-border-radius:60px;
-    border-radius:60px
-}
-#scroll span {
-    position:absolute;
-    top:50%;
-    left:50%;
-    margin-left:-8px;
-    margin-top:-12px;
-    height:0;
-    width:0;
-    border:8px solid transparent;
-    border-bottom-color:#ffffff;
-}
-#scroll:hover {
-    background-color:#e74c3c;
-    opacity:1;filter:"alpha(opacity=100)";
-    -ms-filter:"alpha(opacity=100)";
-}
-</style>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script>
-$(document).ready(function(){
-  // Add smooth scrolling to all links
-  $(".about").on('click', function(event) {
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
 
-    // Make sure this.hash has a value before overriding default behavior
-    if (this.hash !== "") {
-      // Prevent default anchor click behavior
-      event.preventDefault();
+        footer {
+            position: relative
+        }
 
-      // Store hash
-      var hash = this.hash;
+        #scroll {
+            position: absolute;
+            right: 10px;
+            bottom: 50px;
+            cursor: pointer;
+            width: 50px;
+            height: 50px;
+            background-color: #3498db;
+            text-indent: -9999px;
+            /* display:none; */
+            -webkit-border-radius: 60px;
+            -moz-border-radius: 60px;
+            border-radius: 60px
+        }
 
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
-      $('html, body').animate({
-        scrollTop: $(hash).offset().top
-      }, 800, function(){
-   
-        // Add hash (#) to URL when done scrolling (default click behavior)
-        window.location.hash = hash;
-      });
-    } // End if
-  });
+        #scroll span {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-left: -8px;
+            margin-top: -12px;
+            height: 0;
+            width: 0;
+            border: 8px solid transparent;
+            border-bottom-color: #ffffff;
+        }
 
-  $(window).scroll(function(){ 
-        if ($(this).scrollTop() > 100) { 
-            $('#scroll').fadeIn(); 
-        } else { 
-            $('#scroll').fadeOut(); 
-        } 
-    }); 
+        #scroll:hover {
+            background-color: #e74c3c;
+            opacity: 1;
+            filter: "alpha(opacity=100)";
+            -ms-filter: "alpha(opacity=100)";
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            // Add smooth scrolling to all links
+            $(".about").on('click', function(event) {
 
-  $('#scroll').click(function(){ 
-        $("html, body").animate({ scrollTop: 0 }, 600); 
-        return false; 
-    }); 
+                // Make sure this.hash has a value before overriding default behavior
+                if (this.hash !== "") {
+                    // Prevent default anchor click behavior
+                    event.preventDefault();
 
-});
-</script>
+                    // Store hash
+                    var hash = this.hash;
+
+                    // Using jQuery's animate() method to add smooth page scroll
+                    // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 800, function() {
+
+                        // Add hash (#) to URL when done scrolling (default click behavior)
+                        window.location.hash = hash;
+                    });
+                } // End if
+            });
+
+            $(window).scroll(function() {
+                if ($(this).scrollTop() > 100) {
+                    $('#scroll').fadeIn();
+                } else {
+                    $('#scroll').fadeOut();
+                }
+            });
+
+            $('#scroll').click(function() {
+                $("html, body").animate({
+                    scrollTop: 0
+                }, 600);
+                return false;
+            });
+
+        });
+    </script>
 
 </head>
 
 <body>
     <header>
-       
+
         <div class="main-menu fixed-top p-1" style="background: rgba(255,255,255,1)">
             <div class="container">
                 <nav class="navbar navbar-expand-lg navbar-light mb-2">
-                <a class="navbar-brand ml-md-2 mt-2" href="index.html" style="font-size: 30px;font-weight:bold ; color:#074985; font-family:'Sofia'"> <img src="{{asset('images/student.png')}}" style="vertical-align: middle;width: 40px; height: 40px; display:inline-block" class="mb-3" alt="" srcset=""> BOOKIE</a>
+                    <a class="navbar-brand ml-md-2 mt-2" href="index.html" style="font-size: 30px;font-weight:bold ; color:#074985; font-family:'Sofia'"> <img src="{{asset('images/student.png')}}" style="vertical-align: middle;width: 40px; height: 40px; display:inline-block" class="mb-3" alt="" srcset=""> BOOKIE</a>
 
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -156,7 +165,7 @@ $(document).ready(function(){
                             @auth
                             <li class="navbar-item active">
 
- @if(auth()->user()->hasRole('admin'))
+                                @if(auth()->user()->hasRole('admin'))
                                 <a href="{{ url('/admin') }}" class="nav-link">Home</a>
                                 @else
                                 <a href="{{ url('/home') }}" class="nav-link">Home</a>
@@ -184,11 +193,11 @@ $(document).ready(function(){
                             <li class="navbar-item">
                                 <a href="#mu-testimonials" class="nav-link about">About</a>
                             </li>
-                           
+
 
                         </ul>
 
-                      
+
 
                         <form class="form-inline my-2 my-lg-0" style="border: none">
                             <input class="form-control mr-sm-2" type="search" placeholder="Search here..." aria-label="Search">
@@ -205,7 +214,7 @@ $(document).ready(function(){
                 <div class="item-slick1 item1-slick1" style="background-image: url(fash/images/s.jpg);">
                     <div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
                         <span class="caption1-slide1 m-text1 t-center animated visible-false m-b-15" data-appear="fadeInDown">
-                        Book Collection 2020
+                            Book Collection 2020
                         </span>
 
                         <h2 class="caption2-slide1 xl-text1 t-center animated visible-false m-b-37" data-appear="fadeInUp">
@@ -243,7 +252,7 @@ $(document).ready(function(){
                 <div class="item-slick1 item3-slick1" style="background-image: url(fash/images/s4.jpg);">
                     <div class="wrap-content-slide1 sizefull flex-col-c-m p-l-15 p-r-15 p-t-150 p-b-170">
                         <span class="caption1-slide1 m-text1 t-center animated visible-false m-b-15" data-appear="rotateInDownLeft">
-                        Book Collection 2020
+                            Book Collection 2020
                         </span>
 
                         <h2 class="caption2-slide1 xl-text1 t-center animated visible-false m-b-37" data-appear="rotateInUpRight">
@@ -267,7 +276,7 @@ $(document).ready(function(){
         <div class="container">
             <div class="sec-title p-b-60">
                 <h3 class="m-text5 t-center">
-                Highly Recommendes Books
+                    Highly Recommendes Books
                 </h3>
             </div>
 
@@ -301,11 +310,11 @@ $(document).ready(function(){
 
                             <div class="block2-txt p-t-20">
                                 <a href="product-detail.html" class="block2-name dis-block s-text3 p-b-5">
-								{{$book->author}}
+                                    {{$book->author}}
                                 </a>
 
                                 <span class="block2-price m-text6 p-r-5">
-								{{$book->price}}
+                                    {{$book->price}}
                                 </span>
                             </div>
                         </div>
@@ -318,16 +327,16 @@ $(document).ready(function(){
     </section>
 
 
-    <section class="features-sec mt-5 pt-5" >
-        <div class="container" style="background: white" >
+    <section class="features-sec mt-5 pt-5">
+        <div class="container" style="background: white">
             <ul>
-                <li >
+                <li>
                     <span class="icon"><i class="fa fa-shopping-cart" aria-hidden="true"></i></span>
                     <h3>SAFE SHOPPING</h3>
                     <h5>Safe Shopping Guarantee</h5>
                     <h6>Every online transaction you make is 100% safe. Under the Fair Credit Billing Act, your bank cannot hold you liable for more than $50 of fraudulent charges.</h6>
                 </li>
-                <li >
+                <li>
                     <span class="icon return"><i class="fa fa-reply-all" aria-hidden="true"></i></span>
                     <h3>30- DAY RETURN</h3>
                     <h5>Moneyback guarantee</h5>
@@ -344,52 +353,52 @@ $(document).ready(function(){
     </section>
 
     <section id="mu-testimonials">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12">
-						<div class="mu-testimonials-area">
-							<div class="mu-heading-area">
-								<h2 class="mu-heading-title">Who we are</h2>
-								<span class="mu-header-dot"></span>
-							</div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="mu-testimonials-area">
+                        <div class="mu-heading-area">
+                            <h2 class="mu-heading-title">Who we are</h2>
+                            <span class="mu-header-dot"></span>
+                        </div>
 
-							<div class="mu-testimonials-block">
-								<ul class="mu-testimonial-slide">
+                        <div class="mu-testimonials-block">
+                            <ul class="mu-testimonial-slide">
 
-									<li>
-										<p>"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever."</p>
-										<img class="mu-rt-img" src="kindle-master/assets/images/reader-1.jpg" alt="img">
-										<h5 class="mu-rt-name"> - Alice Boga</h5>
-										<span class="mu-rt-title">CEO, Apple Inc.</span>
-									</li>
+                                <li>
+                                    <p>"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever."</p>
+                                    <img class="mu-rt-img" src="kindle-master/assets/images/reader-1.jpg" alt="img">
+                                    <h5 class="mu-rt-name"> - Alice Boga</h5>
+                                    <span class="mu-rt-title">CEO, Apple Inc.</span>
+                                </li>
 
-									<li>
-										<p>"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever."</p>
-										<img class="mu-rt-img" src="kindle-master/assets/images/reader-2.jpg" alt="img">
-										<h5 class="mu-rt-name"> - Jhon Doe</h5>
-										<span class="mu-rt-title">Director, Google Inc.</span>
-									</li>
+                                <li>
+                                    <p>"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever."</p>
+                                    <img class="mu-rt-img" src="kindle-master/assets/images/reader-2.jpg" alt="img">
+                                    <h5 class="mu-rt-name"> - Jhon Doe</h5>
+                                    <span class="mu-rt-title">Director, Google Inc.</span>
+                                </li>
 
-									<li>
-										<p>"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever."</p>
-										<img class="mu-rt-img" src="kindle-master/assets/images/reader-3.jpg" alt="img">
-										<h5 class="mu-rt-name"> - Jessica Doe</h5>
-										<span class="mu-rt-title">Web Developer</span>
-									</li>
+                                <li>
+                                    <p>"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever."</p>
+                                    <img class="mu-rt-img" src="kindle-master/assets/images/reader-3.jpg" alt="img">
+                                    <h5 class="mu-rt-name"> - Jessica Doe</h5>
+                                    <span class="mu-rt-title">Web Developer</span>
+                                </li>
 
-								</ul>
-							</div>
+                            </ul>
+                        </div>
 
 
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    
 
-    
+
+
     <footer>
         <div class="container">
             <div class="row">
@@ -433,9 +442,9 @@ $(document).ready(function(){
                         <h3>Quick Contact us</h3>
                         <h6>We are now offering some good discount
                             on selected books go and shop them</h6>
-                            <form method="POST" action="{{url('/contact_us')}}">
+                        <form method="POST" action="{{url('/contact_us')}}">
                             @csrf
-                                                        <div class="row">
+                            <div class="row">
                                 <div class="col-md-6">
                                     <input placeholder="Name" name="name" required>
                                 </div>
@@ -456,28 +465,28 @@ $(document).ready(function(){
         </div>
         <a href="#" id="scroll"><span></span></a>
 
-       
+
     </footer>
 
 
     <script type="text/javascript" src="fash/vendor/jquery/jquery-3.2.1.min.js"></script>
 
     <script src="kindle-master/assets/js/bootstrap.min.js"></script>
-	<!-- Slick slider -->
+    <!-- Slick slider -->
     <script type="text/javascript" src="kindle-master/assets/js/slick.min.js"></script>
     <!-- Counter js -->
     <script type="text/javascript" src="kindle-master/assets/js/counter.js"></script>
     <!-- Ajax contact form  -->
     <script type="text/javascript" src="kindle-master/assets/js/app.js"></script>
-   
- 
-	
-    <!-- Custom js -->
-	<script type="text/javascript" src="kindle-master/assets/js/custom.js"></script>
-	
-    
 
-   
+
+
+    <!-- Custom js -->
+    <script type="text/javascript" src="kindle-master/assets/js/custom.js"></script>
+
+
+
+
     <!--===============================================================================================-->
     <script type="text/javascript" src="fash/vendor/animsition/js/animsition.min.js"></script>
     <!--===============================================================================================-->

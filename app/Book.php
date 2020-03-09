@@ -73,10 +73,10 @@ class Book extends Model
 // dd($quantity);
     }
 
-    protected $sliders_location = '/coverpages/';
+    protected $covers_location = '/coverpages/';
 
     public function getCoverAttribute($photo){
-    	return $this->sliders_location . $photo;
+    	return $this->covers_location . $photo;
     }
 
     public function user()

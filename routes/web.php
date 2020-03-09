@@ -102,6 +102,7 @@ Route::prefix('admin')->middleware('role:admin', 'auth')->group(function () {
     // manage books
     Route::get('/users/createBookStore', 'Admin\AdminUserController@create')->name('users.create');
     Route::post('/users', 'Admin\AdminUserController@store')->name('users.store');
+    Route::post('/delete/book', 'Admin\AdminBooksController@deleteBook')->name('delete.book');
     Route::resource('/book', 'Admin\AdminBooksController');
     Route::get('search', 'Admin\AdminController@mysearch');
 

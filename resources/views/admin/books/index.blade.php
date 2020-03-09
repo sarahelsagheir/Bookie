@@ -18,7 +18,7 @@
                             <button class="btn btn-primary"><i class="fa fa-search"></i></button>
                         </div>
                     </div>
-                </form>
+     </form>
 </div>
 
 <div class="row">
@@ -35,8 +35,8 @@
 
                     <div class="row">
                         <div class="col-sm-12">
-                            <form action="delete/book" method="POST">
-                                @csrf
+                            <form action="{{route('delete.book')}}" method="POST">
+                              @csrf
                                 <div class="btn-group">
                                     <div class="animated-checkbox">
                                         <label>
@@ -81,8 +81,8 @@
                                             </td>
                                             <td>{{ $book->id }}</td>
                                             <td style="max-width: 200px; max-height: 100px"><img src="{{ $book->cover }}" style="width: 100px; height:100px"></td>
-                                            <td><a href="#">{{ $book->title }}</a></td>
-                                            <td><a href="#">{{ $book->author }}</a></td>
+                                            <td><a href="{{ route('book.show', $book->id) }}">{{ $book->title }}</a></td>
+                                            <td>{{ $book->author }}</td>
                                             <td>
                                                 @if( $book->price ==0)Free
                                             @else
@@ -99,15 +99,7 @@
                                             <td>{{ $book->updated_at->diffForHumans() }}</td>
                                             <td>
                                                 <a class="btn btn-primary btn-sm" href="{{ route('book.edit', $book->id) }}"><i class="fa fa-edit"></i></a>
-                                                <a class="btn btn-primary btn-sm" href="{{ route('book.show', $book->id) }}"><i class="fa fa-eye"></i></a>
-                                                <form action="{{route('book.destroy' ,$book->id)}}" method="POST" class="d-inline-block">
-                                                    @csrf
-                                                    @method('DELETE')
-
-                                                    <input type="hidden" name="id" value="{{$book->id}}">
-                                                    <button id="delteButton" class='btn btn-primary btn-sm ' onclick="return confirm('Are you sure?')"><span class='fa fa-trash delete'></span></button></form>
-
-                            </form>
+                            
                             </td>
                             </tr>
                             @endif
@@ -136,22 +128,21 @@
 
 
 @endsection
-
-
 @section('scripts')
-<script>
-    $(document).ready(function() {
-        $('#check-all').click(function() {
-            if (this.checked) {
-                $('.checkBoxes').each(function() {
-                    this.checked = true;
-                });
-            } else {
-                $('.checkBoxes').each(function() {
-                    this.checked = false;
-                });
-            }
-        });
-    });
-</script>
+	<script>
+		$(document).ready(function(){
+			$('#check-all').click(function(){
+				if(this.checked){
+					$('.checkBoxes').each(function(){
+						this.checked = true;
+					});
+				} 
+				else{
+					$('.checkBoxes').each(function(){
+						this.checked = false;
+					});
+				}
+			});
+		});
+	</script>
 @endsection

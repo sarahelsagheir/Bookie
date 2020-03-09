@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
 
-
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
@@ -22,14 +21,14 @@
 
 <body class="app sidebar-mini rtl">
     <!-- Navbar-->
-    <header class="app-header"><a class="app-header__logo" href="index.html">Bookie</a>
+    <header class="app-header"><a class="app-header__logo" href="#">Bookie</a>
         <!-- Sidebar toggle button-->
         <a class="app-sidebar__toggle" href="#" data-toggle="sidebar" aria-label="Hide Sidebar"></a>
 
-        <ul class="app-nav">
-            <li class="app-search">
+        <ul class="app-nav ">
+            <li class="my-2">
 
-                <form method="POST" action="{{route('order')}}">
+                <form method="POST" class="form-inline" action="{{route('order')}}">
                     <div class="row">
                         <div class="col-md-6">
                             <input type="text" name="search" class="form-control" placeholder="Search Orders" value="{{ old('search') }}">
@@ -37,28 +36,29 @@
                         <div class="col-md-6">
                             @csrf
 
-                            <button class="btn btn-primary"><i class="fa fa-search"></i></button>
+                            <button class="btn btn-primary ml-4"><i class="fa fa-search"></i></button>
                         </div>
                     </div>
                 </form>
             </li>
             <!--Notification Menu-->
 
-            <li class="mt-2">
-                <a href="{{url('admin/chat')}}" class="nav-link cart  my-2 my-lg-0 text-light " role="button">
+            <li class="my-2">
+                <a href="{{url('admin/chat')}}" class="nav-link cart btn my-2 my-lg-0 text-light " role="button">
                     <span><i class="fa fa-envelope" style=" font-size:17px;" aria-hidden="true"></i></span>
                     <span class="quntity">
                         {{DB::table('messages')
-                    ->where('read',0)
-                    ->where('to',Auth::user()->id)
-                    ->count()}}
+                            ->where('read',0)
+                            ->where('to',Auth::user()->id)
+                            ->count()
+                        }}
                     </span>
                 </a>
             </li>
             <!-- User Menu-->
-            <li class="dropdown">
+            <li class="dropdown my-1">
                 <a class="app-nav__item" href="#" data-toggle="dropdown" aria-label="Open Profile Menu">
-                    <i class="fa fa-user fa-lg"></i>
+                    <i class="fa fa-user fa-lg"></i><i class="fa fa-arrow-down fa-sm"></i>
                 </a>
                 <ul class="dropdown-menu settings-menu dropdown-menu-right">
                     <li>
@@ -74,7 +74,7 @@
                     <li>
 
                         <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
-                                                         document.getElementById('logout-form').submit();">
+                             document.getElementById('logout-form').submit();">
                             {{ __('Logout') }}
                         </a>
                         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
@@ -123,7 +123,6 @@
 
 
 
-
             <li>
                 <a class="app-menu__item" href="{{ route('category.index') }}">
                     <i class="app-menu__icon fa fa-list-alt"></i>
@@ -151,7 +150,6 @@
             </li>
 
 
-
             <li class="treeview">
                 <a class="app-menu__item" href="#" data-toggle="treeview">
                     <i class="app-menu__icon fa fa-sliders"></i>
@@ -171,7 +169,6 @@
                     </li>
                 </ul>
             </li>
-
 
 
             <li class="treeview">
@@ -212,7 +209,6 @@
                     <span class="app-menu__label">Contact us</span>
                 </a>
             </li>
-
 
 
 

@@ -5,6 +5,8 @@ use App\Message;
 use App\User;
 use Illuminate\Http\Request;
 use App\Events\NewMessage;
+use Illuminate\Support\Facades\DB;
+
 
 
 class ContactsController extends Controller
@@ -17,13 +19,13 @@ class ContactsController extends Controller
     {
        return view('chat.index');
     }
-<<<<<<< HEAD
+
     //all user for admin chat
     public function getAllUser()
     {
         $contacts = User::where('id', '!=', auth()->id())->get();
 
-        $unreadIds = Message::select(\DB::raw('`from` as sender_id, count(`from`) as messages_count'))
+        $unreadIds = Message::select(DB::raw('`from` as sender_id, count(`from`) as messages_count'))
             ->where('to', auth()->id())
             ->where('read', false)
             ->groupBy('from')
@@ -40,8 +42,7 @@ class ContactsController extends Controller
         return response()->json($contacts);
     }
 
-=======
->>>>>>> 382d3327ad305d1a6da17b37cd4956a2677db6ab
+
 //user contact
     public function create()
     {

@@ -194,6 +194,7 @@
                     <div class="navigation">
                         <h4>Navigation</h4>
                         <ul>
+                            
                             <li><a href="index.html" style="font-size: 16px">Home</a></li>
                             <li><a href="#about" style="font-size: 16px">About Us</a></li>
                             <li><a href="products.html" style="font-size: 16px">Products</a></li>

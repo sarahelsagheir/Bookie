@@ -5,19 +5,20 @@
     }
 </style>
 <div class="text-center">
-<h5 class="display-3 text-primary  mb-3 font-weight-bold">{{$book->title}} Info</h5>
+<h5 class="display-3 text-primary  mb-3 font-weight-bold">{{$book->title}}
+<a class="btn btn-primary btn-lg " href="{{ route('book.edit', $book->id) }}"><i class="fa fa-edit"></i></a>
+
+</h5>
 </div>
 	<section class="product-shop spad page-details">
         <div class="container">
-            @if( session()->has('success') )
-            <div class="alert alert-success">{{ session()->get('success') }}</div>
-            @endif
+            
             <div class="row bg-light"  style="border: none; ">
 
                 <div class="col-lg-10">
                     <div class="row p-3 justify-content-between" >
 
-                        <div class="col-lg-4">
+                        <div class="col-lg-4 col-sm-12">
                             <div class="product-pic-zoom">
                                 <img class="product-big-img" width="300" src="{{ $book->cover }}" alt="">
                                
@@ -25,10 +26,10 @@
 
                         </div>
 
-                        <div class="col-lg-6">
+                        <div class="col-lg-6 col-sm-12 ">
                             <div class="product-details"  >
                                 <div class="pd-title">
-                                    <span>{{$book->category}}</span>
+                                    <p>{{$book->category->title}}</p>
                                     <h2 class="font-weight-bold pt-3">{{$book->title}}</h2>
                                     <form action="{{route('wishlist.store')}}" class="heart-icon" id="contact_form" method="post">
                                         {{csrf_field()}}
